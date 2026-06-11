@@ -1,11 +1,11 @@
 {
-  "name": "Savor",
+  "name": "SavorMonokaiPro",
   "author": "Roy",
   "url": "https://github.com/royc01/notion-theme",
   "version": "6.1.9",
   "displayName": {
-    "default": "Savor",
-    "zh_CN": "写味"
+    "default": "Savor Monokai Pro",
+    "zh_CN": "写味 Monokai Pro"
   },
   "description": {
     "default": "You said that you grudged eating up this kinda feeling.",

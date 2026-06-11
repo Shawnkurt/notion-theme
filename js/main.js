@@ -60,7 +60,7 @@ const initAll = async () => {
     return savorInitPromise;
 };
 
-export const Savor = {
+export const SavorMonokaiPro = {
     initUtils,
     initConfig,
     initI18n,

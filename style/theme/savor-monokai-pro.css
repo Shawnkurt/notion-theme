@@ -1,0 +1,115 @@
+:root[data-theme-mode="dark"][savor-theme="monokai-pro"] {
+    /* Monokai Pro palette mapped from the source file in the project root. */
+    --b3-theme-primary-base-l: 69.42%;
+    --b3-theme-primary-base-ch: 0.1265 230.5;
+    --b3-theme-surface-base-l: 0.2898;
+    --b3-theme-surface-base-ch: 0.0083 317.72;
+    --b3-theme-on-background-base: 99.05% 0.0026 106.45;
+    --Sv-dock-item--activefocus-background--base: 68.98% 0.161 30.76;
+
+    --b3-theme-background: #2d2a2e;/* 编辑区背景 必须用HEX颜色*/
+    --b3-theme-on-background: #fcfcfa;
+    --b3-theme-on-surface: rgba(252, 252, 250, 0.8);
+    --b3-theme-on-surface-light: rgba(252, 252, 250, 0.56);
+    --b3-theme-surface-lighter: #403e41;
+    --Sv-plugin-off-bg: #272428;
+    --Sv-menu-background: #403e41;
+    --Sv-menu-item-hover: rgba(252, 252, 250, 0.06);
+    --Sv-dock-background: #272428;
+    --Sv-dock-item-color: rgba(252, 252, 250, 0.6);
+    --Sv-list-item-arrow: rgba(252, 252, 250, 0.56);
+    --Sv-list-background: rgba(252, 252, 250, 0.04);
+    --Sv-list-focus-hover: rgba(252, 252, 250, 0.08);
+    --Sv-list-focus-active: rgba(255, 216, 102, 0.12);
+    --Sv-layout--resize-hover: rgba(252, 252, 250, 0.12);
+    --Sv-scroll-color: #403e41;
+    --Sv-scroll-color-hover: #5b595c;
+    --Sv-table-thead: #403e41;
+    --Sv-block-ref-color: #78dce8;
+    --Sv-block-ref-background: rgba(120, 220, 232, 0.08);
+    --Sv-block-ref-background-hover: rgba(120, 220, 232, 0.14);
+    --Sv-block-ref-bottom: 1px solid #78dce8;
+    --Sv-block-ref-bottom-d: 1px dashed #78dce8;
+    --Sv-block-ref-bottom-image: none;
+    --Sv-block-link-color: #78dce8;
+    --Sv-block-link-bottom: #78dce8;
+    --Sv-block-link-color-hover: #ffd866;
+    --Sv-block-link-bottom-hover: #ffd866;
+    --Sv-popover-menu: rgba(64, 62, 65, 0.85);
+    --Sv-inline-code: #ff6188;
+    --Sv-code-block-background: #403e41;
+    --Sv-protyle-toolbar-bg: #403e41;
+    --Sv-select-field: #403e41;
+    --Sv-breadcrumb-hover: rgba(252, 252, 250, 0.08);
+
+    --Sv-barWorkspace-color: #2d2a2e;
+    --Sv-barWorkspace-background: oklch(68.98% 0.161 30.76);
+    --Sv-barWorkspace-background-hover: oklch(62.09% 0.1616 30.87);
+    --Sv-toolbar-closeWindow-hover: #ff6188;
+    --Sv-toolbar-closeWindow-svg: #2d2a2e;
+    --Sv-dock-item--activefocus-background: oklch(68.98% 0.161 30.76)!important;
+    --Sv-dock-item--activefocus-color: #2d2a2e;
+    --Sv-block-icon-active: oklch(68.98% 0.161 30.76);
+    --Sv-status-barDock-color: oklch(68.98% 0.161 30.76);
+    --Sv-breadcrumb-active: oklch(68.98% 0.161 30.76);
+    --Sv-breadcrumb-active-color: #2d2a2e;
+    --Sv-breadcrumb-active-hover: oklch(62.09% 0.1616 30.87);
+    --Sv-task-done: #a9dc76;
+    --Sv-task-done-hover: #a9dc76;
+    --b3-pdf-selection: rgba(255, 216, 102, 0.35);
+    --h1-list-graphic: #ff6188;
+    --h2-list-graphic: #ffd866;
+    --h3-list-graphic: #a9dc76;
+    --h4-list-graphic: #78dce8;
+    --h5-list-graphic: #ab9df2;
+    --h6-list-graphic: #fc9867;
+
+    --b3-font-color1-base-l: 99.05%;
+    --b3-font-color1-base-ch: 0.0026 106.45;
+    --b3-font-color2-base-l: 70.58%;
+    --b3-font-color2-base-ch: 0.1936 8.45;
+    --b3-font-color3-base-l: 77.37%;
+    --b3-font-color3-base-ch: 0.1364 46.20;
+    --b3-font-color4-base-l: 89.39%;
+    --b3-font-color4-base-ch: 0.1387 90.47;
+    --b3-font-color5-base-l: 83.61%;
+    --b3-font-color5-base-ch: 0.1422 130.71;
+    --b3-font-color6-base-l: 83.81%;
+    --b3-font-color6-base-ch: 0.0952 205.66;
+    --b3-font-color7-base-l: 74.09%;
+    --b3-font-color7-base-ch: 0.1215 290.68;
+
+    --b3-font-background1: rgba(252, 252, 250, 0.10);
+    --b3-font-background2: rgba(255, 97, 136, 0.14);
+    --b3-font-background3: rgba(252, 152, 103, 0.14);
+    --b3-font-background4: rgba(255, 216, 102, 0.14);
+    --b3-font-background5: rgba(255, 216, 102, 0.18);
+    --b3-font-background6: rgba(169, 220, 118, 0.14);
+    --b3-font-background7: rgba(120, 220, 232, 0.14);
+    --b3-font-background8: rgba(120, 220, 232, 0.14);
+    --b3-font-background9: rgba(120, 220, 232, 0.12);
+    --b3-font-background10: rgba(120, 220, 232, 0.12);
+    --b3-font-background11: rgba(171, 157, 242, 0.16);
+    --b3-font-background12: rgba(171, 157, 242, 0.16);
+    --b3-font-background13: rgba(255, 97, 136, 0.14);
+
+    --Sv-tab-bar-item-after:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M100 100C44.772 100 0 55.228 0 0v100h100z' fill='%23272428'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 100c55.228 0 100-44.772 100-100v100H0z' fill='%23272428'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><rect  y='0%' width='100%' height='80%' fill='%23272428'/></svg>");
+
+    --Sv-tab-bar-V-item-after:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M100 100C100 44.772 55.228 0 0 0H100V100z' fill='%232d2a2e'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 100c55.228 0 100-44.772 100-100v100H0z' fill='%232d2a2e'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><rect  width='100%' height='100%' fill='%232d2a2e'/></svg>");
+
+    --Sv-tab-bar-item-focus-after:url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M100 100C44.772 100 0 55.228 0 0v100h100z' fill='%232d2a2e'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 100c55.228 0 100-44.772 100-100v100H0z' fill='%232d2a2e'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><rect  y='0%' width='100%' height='80%' fill='%232d2a2e'/></svg>");
+
+    body::before {
+        display: none;
+    }
+
+    .protyle-title__input {
+        color: var(--b3-font-color2);
+    }
+}

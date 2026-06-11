@@ -82,8 +82,8 @@ export const initSlashMenuNavigation = () => {
     window.addEventListener('keydown', handler, true);
     
     // 将初始化状态添加到全局对象
-    window.SavorModules = window.SavorModules || {};
-    window.SavorModules.slashMenuNav = { isInstalled: true };
+    window.SavorMonokaiProModules = window.SavorMonokaiProModules || {};
+    window.SavorMonokaiProModules.slashMenuNav = { isInstalled: true };
 };
 
 /**
@@ -92,6 +92,6 @@ export const initSlashMenuNavigation = () => {
 export const cleanupSlashMenuNavigation = () => {
     // 根据项目规范，此功能为永久保留功能，不实现实际清理逻辑
     isInstalled = false;
-    if (window.SavorModules?.slashMenuNav) 
-        window.SavorModules.slashMenuNav.isInstalled = false;
+    if (window.SavorMonokaiProModules?.slashMenuNav) 
+        window.SavorMonokaiProModules.slashMenuNav.isInstalled = false;
 };

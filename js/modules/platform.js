@@ -76,7 +76,7 @@ export const getDeviceType = () => {
 
 // 初始化平台判断功能
 export const initPlatformDetection = () => {
-    window.SavorPlatform = {
+    window.SavorMonokaiProPlatform = {
         isMobile,
         isMac,
         isWindows,
@@ -102,8 +102,8 @@ export const initPlatformDetection = () => {
 export const cleanupPlatformDetection = () => {
     
     // 移除添加的CSS类
-    const platform = window.SavorPlatform?.getPlatform?.() || 'unknown';
-    const deviceType = window.SavorPlatform?.getDeviceType?.() || 'mouse';
+    const platform = window.SavorMonokaiProPlatform?.getPlatform?.() || 'unknown';
+    const deviceType = window.SavorMonokaiProPlatform?.getDeviceType?.() || 'mouse';
     
     document.body.classList.remove(`platform-${platform}`);
     document.body.classList.remove(`device-${deviceType}`);
@@ -112,5 +112,5 @@ export const cleanupPlatformDetection = () => {
     cleanupMobileMenu();
     
     // 清理全局变量
-    window.SavorPlatform = null;
+    window.SavorMonokaiProPlatform = null;
 };

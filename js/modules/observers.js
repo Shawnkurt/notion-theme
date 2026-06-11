@@ -7,8 +7,8 @@ import { applyRememberedThemeStyle, initSavorToolbar, initThemeObserver, initTop
 // 主初始化函数
 const initMain = async () => {
     await Promise.all([
-        window.i18n.ready(),
-        window.config.load()
+        window.SavorMonokaiProI18n.ready(),
+        window.SavorMonokaiProConfig.load()
     ]);
     await applyRememberedThemeStyle();
     initThemeObserver();

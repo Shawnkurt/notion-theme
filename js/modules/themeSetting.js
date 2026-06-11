@@ -19,6 +19,7 @@ import { shouldLimitDesktopEnhancements } from './device.js';
 let featureButtonsActive = new Set();
 let domCache = new Map();
 let menuListeners = new WeakMap();
+const THEME_NAME = "SavorMonokaiPro";
 
 // 获取缓存元素
 const getCachedElement = (selector) => {
@@ -195,7 +196,7 @@ export const renderAllButtons = (targetToolbar = null) => {
 // 工具栏和观察器管理
 const shouldShowSavorToolbar = () => {
     const mode = window.theme.themeMode;
-    return document.documentElement.getAttribute(`data-${mode}-theme`) === "Savor";
+    return document.documentElement.getAttribute(`data-${mode}-theme`) === THEME_NAME;
 };
 
 const handleMenuClick = (e) => {
@@ -216,7 +217,7 @@ const handleMenuClick = (e) => {
     if (targetMode === currentMode) return;
     
     const targetTheme = targetMode === themeLight ? window.siyuan.config.appearance.themeLight : window.siyuan.config.appearance.themeDark;
-    if (targetTheme !== "Savor") return;
+    if (targetTheme !== THEME_NAME) return;
     
     window.theme.applyThemeTransition(() => {});
 };
@@ -253,7 +254,7 @@ const ensureSavorToolbarCSS = () => {
 export const initSavorToolbar = () => {
     ensureSavorToolbarCSS();
     // 移动端不创建桌面工具栏
-    if (window.SavorPlatform?.isMobile?.() || document.getElementById("savorToolbar")) return;
+    if (window.SavorMonokaiProPlatform?.isMobile?.() || document.getElementById("savorToolbar")) return;
     
     const commonMenu = document.getElementById("commonMenu");
     if (!commonMenu || !shouldShowSavorToolbar()) return;
@@ -271,9 +272,9 @@ export const initSavorToolbar = () => {
 export const initStatusPosition = () => {
     let lastOffset = null;
     const updatePosition = () => {
-        const status = Savor$("#status");
+        const status = $("#status");
         if (!status) return;
-        const dockr = Savor$(".layout__dockr"), dockVertical = Savor$(".dock--vertical");
+        const dockr = $(".layout__dockr"), dockVertical = $(".dock--vertical");
         const dockrWidth = dockr?.offsetWidth || 0;
         const isFloating = dockr?.classList.contains("layout--float");
         const dockVerticalWidth = (!dockVertical || dockVertical.classList.contains("fn__none")) ? 0 : 26;
@@ -286,7 +287,7 @@ export const initStatusPosition = () => {
         lastOffset = offset;
     };
     const observer = new ResizeObserver(throttle(updatePosition, 16));
-    [".layout__dockr", ".dock--vertical", ".layout__center"].forEach(sel => { const el = Savor$(sel); el && observer.observe(el); });
+    [".layout__dockr", ".dock--vertical", ".layout__center"].forEach(sel => { const el = $(sel); el && observer.observe(el); });
     window.statusObserver = observer;
     window.statusObserver.updatePosition = updatePosition;
     updatePosition();
@@ -295,7 +296,7 @@ export const initStatusPosition = () => {
 // 初始化主题观察器
 export const initThemeObserver = () => {
     let previousThemeMode = window.theme.themeMode;
-    let previousThemeName = shouldShowSavorToolbar() ? "Savor" : null;
+    let previousThemeName = shouldShowSavorToolbar() ? THEME_NAME : null;
     
     const themeObserver = new MutationObserver(debounce(() => {
         const newThemeMode = window.siyuan.config.appearance.mode === 0 ? "light" : "dark";
@@ -304,7 +305,7 @@ export const initThemeObserver = () => {
         
         if (previousThemeMode === newThemeMode && previousThemeName === newThemeName) return;
         
-        const isSavorToSavor = previousThemeName === "Savor" && newThemeName === "Savor";
+        const isSavorToSavor = previousThemeName === THEME_NAME && newThemeName === THEME_NAME;
         
         const commonMenu = getCachedElement("#commonMenu");
         const existingSavorToolbar = document.getElementById("savorToolbar");
@@ -379,7 +380,7 @@ export const initTopBarPluginMenuObserver = () => {
 // 主题清理函数
 export const destroyTheme = () => {     
     // 清理功能按钮和全局变量
-    window.allButtons?.forEach(btn => btn.type === 'feature' && Savor$(`#${btn.id}`)?.remove());
+    window.SavorMonokaiProButtons?.forEach(btn => btn.type === 'feature' && $(`#${btn.id}`)?.remove());
     window.featureButtonsActive?.clear();
     Object.assign(window, {
         tabBarsMarginInitialized: false,
@@ -391,13 +392,13 @@ export const destroyTheme = () => {
     [window.statusObserver, window.topBarPluginMenuObserver].forEach(obs => obs?.disconnect());
 
     // 清理DOM和样式
-    Savor$$('[id^="Sv-theme-color"], #savorToolbar, #savor-toolbar-visibility').forEach(el => el.remove());
-    Savor$('#status')?.style.setProperty('transform', '');
-    Savor$('#status')?.style.setProperty('max-width', '');
+    document.querySelectorAll('[id^="Sv-theme-color"], #savorToolbar, #savor-toolbar-visibility').forEach(el => el.remove());
+    $('#status')?.style.setProperty('transform', '');
+    $('#status')?.style.setProperty('max-width', '');
 
     // 清理缓存和属性
     window.domCache?.clear();
-    Savor$('#commonMenu') && window.toggleMenuListener?.(Savor$('#commonMenu'), false);
+    $('#commonMenu') && window.toggleMenuListener?.($('#commonMenu'), false);
     document.documentElement.removeAttribute('savor-theme');
     document.documentElement.removeAttribute('savor-tabbar');
 
@@ -523,7 +524,7 @@ export const initTheme = () => {
             get themeMode() { return window.siyuan?.config?.appearance?.mode === 0 ? 'light' : 'dark'; },
 
             applyThemeTransition: (callback) => {
-                const status = Savor$('#status');
+                const status = $('#status');
                 const currentTransform = status?.style.transform;
                 
                 // 简化回调执行逻辑

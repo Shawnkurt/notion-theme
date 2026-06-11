@@ -47,6 +47,7 @@
 @import url( style/theme/savor-vinegar.css);/* Vinegar 配色 */
 @import url( style/theme/savor-ocean.css);/* Ocean 配色 */
 @import url( style/theme/savor-mountain.css);/* Mountain 配色 */
+@import url( style/theme/savor-monokai-pro.css);/* Monokai Pro 配色 */
 
 @font-face {
     font-family: 'Twitter Emoji';
